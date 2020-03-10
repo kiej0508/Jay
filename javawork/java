@@ -1,0 +1,154 @@
+[ JAVA ]
+※ 도큐먼트 : https://docs.oracle.com/javase/8/docs/api/
+※ 활용 목적에 따른 java 대표 기술
+	(1) java SE (Standard Edition) : Core
+		- 일반적인 응용 프로그램 작성 (흔히 윈도우에서 사용하는 게임프로그램, 사무프로그램 등)
+	(2) java EE (Enterprise Editiom)
+		- 분산처리, 웹 등 전반적인 분야 (ERP 등)
+	(3) java ME (Micro Edition)
+		- 모바일(안드로이드X, 2G), 임베디드(?)
+
+1. 준비과정
+	(1) jdk(Java Development Kit) : 컴파일러 / 있어야 개발가능
+		- 다운로드 및 설치
+		- path 설정 (Programfiles > Java > bin폴더)
+		- 콘솔에서 java, javac 실행해보면 준비가 잘 됐는지 알 수 있음
+		
+	(2) jre(Java Runtime Environment) : 자바 가상머신 / 자바로 만들은 프로그램 실행
+		- 플랫폼(운영체제)에 도움을 받지 않고 별도 공간을 가지고 그 안에서 프로그램을 작성하고 실행
+
+	(3) 개발툴
+		- Eclipse
+			- 다운 및 설치
+				- https://www.eclipse.org/downloads/
+				  → Download
+				  → Download Packages
+				  → Eclipse IDE for Enterprise Java Developers / OS선택
+				  → File: eclipse-jee-2019-12-R-win32-x86_64.zip 다운로드
+		- Intelli-j
+				  
+2. java & javac
+	(1) javac (c=compile)
+		- 원시소스를 바이트코드로 변환시키는 컴파일러(컴파일.class)
+	(2) java
+		- 컴파일된 코드를 실행시키는 역할
+
+3. manual
+	(1) 가장 기본이 되는 틀
+		class FirstTest { → 반드시 이 이름에서 대소문자까지 동일하게 파일 저장할 것
+			public static void main(String[] args){
+				
+			}
+		}
+		
+	(2) 바이트코드로 변환
+		- dos에서 경로 접근 → javac 파일명.java
+		- 변환된 파일 파일명.class 생성됨
+		
+	(3) 변환된 파일 실행
+		- java 파일명
+		
+	(4) dos창에 내용 출력
+		- java.lang.System.out.println("출력내용");
+			: 메서드 반복 시 줄바꿈 기능 포함
+		- java.lang.System.out.print("출력내용");
+			: 메서드 반복 시 줄바꿈 없이 연결됨
+		  ※ 한글때문에 오류 발생할 경우에 ANSI로 인코딩
+		  
+	(5) 주석
+		1) // 한줄 주석
+		2) /* 여러줄 주석 */
+
+4. variable 변수
+	(1) 임시기억(저장) 장소
+	(2) 하나의 데이터만 저장
+	(3) 선언 : 반드시 초기화해야 함
+		  데이터타입 변수명;
+		  변수명 = 데이터;
+		- 프로그램을 안전하게 구현할 수 있도록 변수에 엄격하게 규칙이 적용됨
+	(4) 유효범위 : 반드시 선언된 블럭 내에서만 사용해야 함
+		- stack
+	(5) 변수, 상수, 리터럴
+		1) 변수 : 값을 계속 변환할 수 있음
+		2) 상수(=constant) : 값이 항상 고정되어있음 / 메모리 공간에서의 상수
+		30 리터럴(=상수) : 실제 값으로의 상수
+
+5. 데이터 타입 (기본형, primitive)
+	용도		크기
+	----	--------------------
+	정수형	
+			byte	1byte	2^8		(0~255 → -128~127)
+			short	2byte	2^16
+			int		4byte	2^32	default
+			long	8byte	2^64
+			long보다도 큰 숫자를 사용해야할 때는???
+	실수형	
+			float	4byte
+			double	8byte			default
+	문자형	
+			char	2byte		※ C, C++은 한 문자열을 1byte(ASCII)로 저장 / java는 ASCII+1byte → UNICODE로 저장
+	논리형	
+			boolean	true/false	※ C는 0, 1로 대체 가능하나 java에서는 딱 요거로만 써야함
+
+6. 연산자
+	(1) 산술연산자
+		- *, /, %, +, -
+		- ++, --
+			: 증감연산자, 단항연산자
+			: 
+	(2) 비교연산자
+		- >, <, >= , <=, ==, !=
+	(3) 논리연산자
+		- &&(and), |(or), !(not)
+	(4) 대입연산자
+		- =, +=, -=. /=, *=, ...
+	(5) 비트연산자
+		- &, |, ^, >>, <<, >>>, ~, ..
+	(6) 캐스팅연산자★
+		- 강제 형변환 연산자
+		1) 명시적
+			- (데이터타입)변수
+		2) 묵시적
+			- 별도로 타입을 변형하는 코드가 없어도 알아서 처리되는 것
+			- 같은 용도의 데이터타입인데 더 크기가 큰 데이터타입에 작은 테이터타입을 적용할 때 OK
+			- 정수형에 문자를 넣을때 아스키코드로 자동 변형되는 경우 OK
+			- 문자령에 숫자를 넣을때 아스키코드로 자동 변형되는 경우 OK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
