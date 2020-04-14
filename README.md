@@ -7,7 +7,7 @@
 `Personal Color`는 개인 고유의 신체색을 의미하며, 개인의 특성을 분석하여 퍼스널컬러 타입 분류체계의 한 타입에 개인을 대응시켜 그에 조화를 이루는 색을 진단하여 적합한 메이크업, 헤어, 의상 등의 `색채 이미지를 연출`하는 시스템입니다.   
    
    
-## [ Deap Learning_Personal Color Type Classifier ]
+## [ Deep Learning_Personal Color Type Classifier ]
 
 ### Dataset Creater
 `Face Detection` : 얼굴인식, 이미지 리사이징 (input image 사진 20만장 / output image 사진 15만장)   
@@ -30,7 +30,7 @@ Result Model : `cai.h5`
 ## [ Color Palette Extraction ]
 
 ### Bright Color & Harmony Color
-    [ 분석 확장 과정 이미지로 보여줄 수 있으면 추가 ]   
+<img src="jay/img/Data-Analysis.png" width=100%>   
 색이론으로 나오는 팔레트는 원래 하난데욤 의문점이 있어서 아래처럼 분석 ㅇㅇ   
 그래서 최종 팔레트는 ~!@#!@#^%!@#!@ 입니다   
 [* 분석파트 보고서?](url)   
@@ -40,10 +40,30 @@ Result Model : `cai.h5`
 	[ 프로세스 이미지 ]   
 사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.   
    
-`Grey tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.   
+`Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.   
    
 위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.
-   
+
+<table border="0" width="100%">
+<colgroup>
+<col width="30%"/>
+<col width="70%"/>
+</colgroup>
+
+<thead>
+	<tr>
+		<th scope="col">
+			사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.   
+	   
+			`Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.   
+			   
+			위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.
+		</th>
+		<th scope="col">
+			<img src="jay/img/color-clustering.png" width=100%>
+		</th>
+</tr>
+</thead>
    
 ## [ Webstie ]
     [ 웹 구현 이미지 ]   
