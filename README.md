@@ -5,7 +5,8 @@
 기존에 사람의 눈에 의해 판단되었던 주관적인 퍼스널 컬러 타입의 진단 과정을 사용자에게 제공받은 사진을 화이트 밸런스 조정 등 전처리를 거쳐 얻은 측색 결과로 사용자의 퍼스널 컬러 타입을 진단합니다.   
    
 `Personal Color`는 개인 고유의 신체색을 의미하며, 개인의 특성을 분석하여 퍼스널컬러 타입 분류체계의 한 타입에 개인을 대응시켜 그에 조화를 이루는 색을 진단하여 적합한 메이크업, 헤어, 의상 등의 `색채 이미지를 연출`하는 시스템입니다.   
-   
+`CAI Total Process`   
+<img src="jay/img/total-process.jpg" width=100%>   
    
 ## [ Deep Learning_Personal Color Type Classifier ]
 
@@ -45,25 +46,11 @@ Result Model : `cai.h5`
 위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.
 
 <table border="0" width="100%">
-<colgroup>
-<col width="30%"/>
-<col width="70%"/>
-</colgroup>
-
-<thead>
-	<tr>
-		<th scope="col">
-			사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.   
-	   
-			`Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.   
-			   
-			위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.
-		</th>
-		<th scope="col">
-			<img src="jay/img/color-clustering.png" width=100%>
-		</th>
+<tr>
+<td width="40%">사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.</br>`Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.</br>위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.</td>
+<td width="60%"><img src="jay/img/color-clustering.png"></td>
 </tr>
-</thead>
+</table>
    
 ## [ Webstie ]
     [ 웹 구현 이미지 ]   
