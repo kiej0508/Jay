@@ -5,6 +5,7 @@
 기존에 사람의 눈에 의해 판단되었던 주관적인 퍼스널 컬러 타입의 진단 과정을 사용자에게 제공받은 사진을 화이트 밸런스 조정 등 전처리를 거쳐 얻은 측색 결과로 사용자의 퍼스널 컬러 타입을 진단합니다.   
    
 `Personal Color`는 개인 고유의 신체색을 의미하며, 개인의 특성을 분석하여 퍼스널컬러 타입 분류체계의 한 타입에 개인을 대응시켜 그에 조화를 이루는 색을 진단하여 적합한 메이크업, 헤어, 의상 등의 `색채 이미지를 연출`하는 시스템입니다.   
+   
 `CAI Total Process`   
 <img src="jay/img/total-process.jpg" width=100%>   
    
@@ -38,7 +39,7 @@ Result Model : `cai.h5`
 
    
 ### Main Purchase Clustering Color
-	[ 프로세스 이미지 ]   
+<img src="jay/img/cnn-alexnet.jpg" width=100%>   
 사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.   
    
 `Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.   
@@ -53,7 +54,7 @@ Result Model : `cai.h5`
 </table>
    
 ## [ Webstie ]
-    [ 웹 구현 이미지 ]   
+<img src="jay/img/cai-webpage.png" width=100%>   
 ### Type Prediction & Matched Palette
 `Personal Color Type Prediction`는 웹을 통해 사용자가 업로드한 사진을 딥러닝 모델`cai.h5`를 적용하여 퍼스널컬러 타입을 예측해 사용자에게 안내합니다.   
    
