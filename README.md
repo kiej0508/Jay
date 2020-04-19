@@ -24,7 +24,8 @@
 <img src="jay/img/color-system-converter.jpg" width=100%>   
    
 ### Model
-	[ 프로세스 이미지 ]   
+<img src="jay/img/cnn-alexnet.jpg" width=100%>   
+
 `CNN Training`   
 Result Model : `cai.h5`   
    
@@ -32,26 +33,21 @@ Result Model : `cai.h5`
 ## [ Color Palette Extraction ]
 
 ### Bright Color & Harmony Color
-<img src="jay/img/Data-Analysis.png" width=100%>   
+<img src="jay/img/Data-Analysis.jpg" width=100%>   
 색이론으로 나오는 팔레트는 원래 하난데욤 의문점이 있어서 아래처럼 분석 ㅇㅇ   
 그래서 최종 팔레트는 ~!@#!@#^%!@#!@ 입니다   
 [* 분석파트 보고서?](url)   
 
    
 ### Main Purchase Clustering Color
-<img src="jay/img/cnn-alexnet.jpg" width=100%>   
-사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.   
+<img src="jay/img/color-clustering.jpg" width=100%>   
+데이터베이스의 상품 이미지를 경계값 기반의 패션아이템 분리 모델을 사용하여 배경 이미지와 옷을 분리, 대표 색을 추출하여 데이터베이스에 해당 상품의 HSV data로 적재합니다.   
+사용자가 닉네임으로 조회할 경우 데이터베이스에서 사용자의 구매상품을 실시간으로 조회하여 구매한 상품의 색 리스트를 받아옵니다.   
    
 `Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.   
    
-위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.
-
-<table border="0" width="100%">
-<tr>
-<td width="40%">사용자가 닉네임으로 조회할 경우 데이터베이스에서 구매상품을 실시간으로 조회하여 구매한 상품에서 **여기에 데이터베이스에 상품 대표 색 적재한거를 넣어야 하나**으로 추출한 색 리스트를 받아옵니다.</br>`Gray tone Filter`를 이용하여 사용자가 구매한 상품 중에서 흑백에 근접한 상품을 제외시킨 후 `Color Generator`로 클러스터링의 오차를 줄위기 위해 구매상품 색상의 규모를 확장합니다.</br>위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.</td>
-<td width="60%"><img src="jay/img/color-clustering.png"></td>
-</tr>
-</table>
+위 결과값으로 `Color Clustering`에서 고객이 주로 구매한 상품의 색을 군집화하여 주요 구매 색상 팔레트를 추출합니다.   
+   
    
 ## [ Webstie ]
 <img src="jay/img/cai-webpage.png" width=100%>   
