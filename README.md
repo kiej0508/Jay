@@ -6,40 +6,44 @@
    
 `Personal Color`는 개인 고유의 신체색을 의미하며, 개인의 특성을 분석하여 퍼스널컬러 타입 분류체계의 한 타입에 개인을 대응시켜 그에 조화를 이루는 색을 진단하여 적합한 메이크업, 헤어, 의상 등의 `색채 이미지를 연출`하는 시스템입니다.   
    
-`CAI Total Process`   
+#### `CAI Total Process`   
 <img src="jay/img/total-process.jpg" width=100%>   
    
 ## [ Deep Learning_Personal Color Type Classifier ]
 
 ### Dataset Creater
-`Face Detection` : 얼굴인식, 이미지 리사이징 (input image 사진 20만장 / output image 사진 15만장)   
+#### `Face Detection`   
+: 얼굴인식, 이미지 리사이징 (input image 사진 20만장 / output image 사진 15만장)   
 <img src="jay/img/face-detection.jpg" width=100%>   
-`Skin Color Extraction` : 안면 측색   
-    [* 측색 부위 선정](url)   
+#### `Skin Color Extraction`   
+: 안면 측색   
+[Personal color analysis report](url)   
 <img src="jay/img/skin-color-extraction.jpg" width=100%>   
-`Color System Converter` : 측색 결과 기준 타입 분류   
-	- BGR → RGB → HSV   
-`Personal Color Type Classifier` : 딥러닝용 데이터셋 생성   
-    [* 색 분석 내용](url)   
+#### `Color System Converter & Type Classifier`   
+: 색 체계 변환 [ BGR → RGB → HSV ]   
+: 측색 결과 기준 딥러닝용 데이터셋 생성   
+[Personal color theory report](url)   
 <img src="jay/img/color-system-converter.jpg" width=100%>   
    
 ### Model
+#### `CNN / AlexNet`   
+: Result model - `CAI.h5`
 <img src="jay/img/cnn-alexnet.jpg" width=100%>   
-
-`CNN Training`   
-Result Model : `cai.h5`   
    
    
 ## [ Color Palette Extraction ]
 
 ### Bright Color & Harmony Color
+#### `Personal color Analysis`   
+: 퍼스널컬러 분석 확장 프로세스   
+[Personal color analysis report](url)   
 <img src="jay/img/Data-Analysis.jpg" width=100%>   
 색이론으로 나오는 팔레트는 원래 하난데욤 의문점이 있어서 아래처럼 분석 ㅇㅇ   
-그래서 최종 팔레트는 ~!@#!@#^%!@#!@ 입니다   
-[* 분석파트 보고서?](url)   
-
+그래서 최종 팔레트는 [edgwsrfafhnwdrs] 입니다   
+   
    
 ### Main Purchase Clustering Color
+#### `Data acquisition & Representation User's color`   
 <img src="jay/img/color-clustering.jpg" width=100%>   
 데이터베이스의 상품 이미지를 경계값 기반의 패션아이템 분리 모델을 사용하여 배경 이미지와 옷을 분리, 대표 색을 추출하여 데이터베이스에 해당 상품의 HSV data로 적재합니다.   
 사용자가 닉네임으로 조회할 경우 데이터베이스에서 사용자의 구매상품을 실시간으로 조회하여 구매한 상품의 색 리스트를 받아옵니다.   
@@ -50,7 +54,8 @@ Result Model : `cai.h5`
    
    
 ## [ Webstie ]
-<img src="jay/img/cai-webpage.png" width=100%>   
+<img src="jay/img/cai-webpage.jpg" width=100%>   
+
 ### Type Prediction & Matched Palette
 `Personal Color Type Prediction`는 웹을 통해 사용자가 업로드한 사진을 딥러닝 모델`cai.h5`를 적용하여 퍼스널컬러 타입을 예측해 사용자에게 안내합니다.   
    
